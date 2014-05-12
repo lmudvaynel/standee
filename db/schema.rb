@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 20140512123649) do
   end
 
   create_table "photos", force: true do |t|
+    t.integer  "gallery_id"
     t.string   "alt"
     t.string   "title"
     t.datetime "created_at"
