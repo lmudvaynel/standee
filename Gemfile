@@ -7,13 +7,12 @@ gem 'rails', '4.1.0'
 gem 'mysql2'
 gem 'friendly_id'
 gem 'activeadmin', github: 'gregbell/active_admin'
-gem 'ancestry'
 gem 'paperclip'
 gem 'ckeditor'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'russian'
-
+gem 'devise'
 
 # Gems used only for assets and not required
 # in production environments by default.

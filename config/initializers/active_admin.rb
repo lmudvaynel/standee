@@ -10,7 +10,7 @@ ActiveAdmin.setup do |config|
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
-  config.site_title_link = "/"
+  # config.site_title_link = "/"
 
   # Set an optional image to be displayed for the header
   # instead of a string (overrides :site_title)
@@ -54,7 +54,7 @@ ActiveAdmin.setup do |config|
   # ensure that there is a currently logged in admin user.
   #
   # This setting changes the method which Active Admin calls
-  # within the controller.
+  # within the application controller.
   config.authentication_method = :authenticate_admin_user!
 
   # == User Authorization
@@ -81,7 +81,7 @@ ActiveAdmin.setup do |config|
   # user performing them.
   #
   # This setting changes the method which Active Admin calls
-  # to return the currently logged in user.
+  # (within the application controller) to return the currently logged in user.
   config.current_user_method = :current_admin_user
 
 
@@ -140,8 +140,8 @@ ActiveAdmin.setup do |config|
   # Active Admin resources and pages from here.
   #
   # config.before_filter :do_something_awesome
-  
-  
+
+
   # == Setting a Favicon
   #
   # config.favicon = '/assets/favicon.ico'
