@@ -19,7 +19,7 @@
                       left: 128+'px'
                     },250);
             setTimeout(function(){
-              $('.image').stop().eq(<%=index%>).animate({
+              $('.image').eq(<%=index%>).stop().animate({
                    left: 0+'px'
                     },250);
           }, 250);
@@ -27,7 +27,7 @@
         else
           {
           counter[<%=index%>]--;
-          $('.image').eq(<%=index%>).animate({
+          $('.image').eq(<%=index%>).stop().animate({
                       left: -counter[<%=index%>]*5*128+'px'
                     },1500);
           }
@@ -49,7 +49,7 @@
                       left: -counter[<%=index%>]*5*128-128+'px'
                     },250);
             setTimeout(function(){
-              $('.image').stop().eq(<%=index%>).animate({
+              $('.image').eq(<%=index%>).stop().animate({
                    left: -counter[<%=index%>]*5*128+'px'
                     },250);
           }, 250);
@@ -57,7 +57,7 @@
         else
           {
           counter[<%=index%>]++;
-          $('.image').eq(<%=index%>).animate({
+          $('.image').eq(<%=index%>).stop().animate({
                       left: -counter[<%=index%>]*5*128+'px'
                     },1500);
           }"
