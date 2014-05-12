@@ -1,7 +1,7 @@
 # encoding: utf-8
 class PagesController < ApplicationController
   def show
-    @page = Page.friendly.find(params[:slug])
+    @page = Page.find_by_slug(params[:slug])
     render params[:slug] if controller_view_exists?(params[:slug])
   end
 
