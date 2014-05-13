@@ -883,7 +883,7 @@
 	
 	function getHashtag(){
 		var url = location.href;
-		hashtag = (url.indexOf('#prettyPhoto') !== -1) ? decodeURI(url.substring(url.indexOf('#prettyPhoto')+1,url.length)) : false;
+		hashtag = (url.indexOf('?prettyPhoto') !== -1) ? decodeURI(url.substring(url.indexOf('?prettyPhoto')+1,url.length)) : false;
 
 		return hashtag;
 	};
@@ -894,7 +894,7 @@
 	};
 	
 	function clearHashtag(){
-		if ( location.href.indexOf('#prettyPhoto') !== -1 ) location.hash = "prettyPhoto";
+		if ( location.href.indexOf('?prettyPhoto') !== -1 ) location.hash = "prettyPhoto";
 	}
 	
 	function getParam(name,url){
