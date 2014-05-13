@@ -1,7 +1,7 @@
 # encoding: utf-8
 ActiveAdmin.register Gallery do
   permit_params :name,
-    photos_attributes: [:id, :gallery_id, :alt, :title, :created_at, :updated_at, :image]
+    photos_attributes: [:id, :gallery_id, :alt, :title, :created_at, :updated_at, :image, :_destroy]
   form do |f|
     f.inputs do
       f.input :name

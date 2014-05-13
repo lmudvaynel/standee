@@ -11,28 +11,7 @@
   </div>
   <div class="column second">
     <% Gallery.all.each_with_index do |gallery,index| %>
-    <div class="button-left" onclick="
-        if (counter[<%=index%>]==undefined)
-          {counter[<%=index%>]=0};
-        if (counter[<%=index%>]==0) 
-          {$('.image').eq(<%=index%>).stop().animate({
-                      left: 128+'px'
-                    },250);
-            setTimeout(function(){
-              $('.image').eq(<%=index%>).stop().animate({
-                   left: 0+'px'
-                    },250);
-          }, 250);
-        }
-        else
-          {
-          counter[<%=index%>]--;
-          $('.image').eq(<%=index%>).stop().animate({
-                      left: -counter[<%=index%>]*5*128+'px'
-                    },1500);
-          }
-          console.log(counter[<%=index%>])"
-          >
+    <div class="button-left" onclick="left_click(<%=index%>)">
       </div>
       <div class="image">
         <% gallery.photos.each do |photo| %>
@@ -41,27 +20,7 @@
           </div>
         <% end %>
       </div>
-      <div class="button-right" onclick="
-     if (counter[<%=index%>]==undefined)
-          {counter[<%=index%>]=0};
-        if (counter[<%=index%>]==(Math.ceil($('.image').eq(<%=index%>).find('.element').length)/5)-1)
-          {$('.image').eq(<%=index%>).stop().animate({
-                      left: -counter[<%=index%>]*5*128-128+'px'
-                    },250);
-            setTimeout(function(){
-              $('.image').eq(<%=index%>).stop().animate({
-                   left: -counter[<%=index%>]*5*128+'px'
-                    },250);
-          }, 250);
-        }
-        else
-          {
-          counter[<%=index%>]++;
-          $('.image').eq(<%=index%>).stop().animate({
-                      left: -counter[<%=index%>]*5*128+'px'
-                    },1500);
-          }"
-          >
+      <div class="button-right" onclick="right_click(<%= index %>)">
       </div>
     <% end %>
   </div>
