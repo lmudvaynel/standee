@@ -17,7 +17,11 @@
         <ul>
           <% gallery.photos.each do |photo| %>
             <li>
-              <%= image_tag photo.image(:gallery) %>
+              <%= link_to photo.image.url(:original), rel: "prettyPhoto[pp_gal_#{index}]" do %>
+                <%= image_tag photo.image.url(:gallery), 
+                    alt: photo.alt,
+                    title: photo.title %>
+              <% end %>
             </li>
           <% end %>
         </ul>
