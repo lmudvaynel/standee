@@ -15,3 +15,4 @@
 //= require turbolinks
 //= require_tree .
 //= require jquery.prettyPhoto
+//= require init_app

@@ -1,5 +1,6 @@
 <script type="text/javascript">
-  var counter=[]
+  var a = JSON.parse('<%= raw @photos_json %>'); 
+  $(document).ready(update_tag(a));
 </script>
 <div class="content">
   <div class="column first">
