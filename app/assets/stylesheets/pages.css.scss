@@ -40,9 +40,63 @@ body {
 .content .column {float: left;}
 .content .first { width: 20%}
 .content .second { overflow: hidden;}
+.content .third { position: absolute; right: 10%; top: 2%; width: 15%; font-size: 13px;}
 
-.column .name {padding: 46px 58px;}
+.column .name {text-align: center; line-height: 140px; height: 140px;
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;      
+  }
+}
 .element { float: left; padding: 4px 4px;}
-.image {clear: both; height: 120px; position: relative;}
-.button-right {height: 50px; width: 19px; background-color: green; position: absolute; float: right; margin-top: -75px; right: 28%;}
+.image {clear: both; position: relative;}
+.button-right {height: 50px; width: 19px; background-color: green; position: absolute; float: right; margin-top: -95px; right: 28%;}
 .button-left {height: 50px; width: 19px; background-color: green; position: absolute; float: left; margin-top: 45px; left: 18%;}
+
+.image ul li {overflow: hidden; display: inline-block; padding: 10px 2px;}
+
+ /* RESET CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: top;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1.2;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

@@ -5,7 +5,7 @@
   <div class="column first">
     <% Gallery.all.each do |gallery| %>
       <div class="name">
-        <%= gallery.name %>
+        <span><%= gallery.name %></span>
       </div>
     <% end %>
   </div>
@@ -14,17 +14,45 @@
     <div class="button-left" onclick="left_click(<%=index%>)">
       </div>
       <div class="image">
-        <% gallery.photos.each do |photo| %>
-          <div class="element">
-            <%= image_tag photo.image(:gallery) %>
-          </div>
-        <% end %>
+        <ul>
+          <% gallery.photos.each do |photo| %>
+            <li>
+              <%= image_tag photo.image(:gallery) %>
+            </li>
+          <% end %>
+        </ul>
       </div>
       <div class="button-right" onclick="right_click(<%= index %>)">
       </div>
     <% end %>
   </div>
-  <div class="column">
-    gfdh
+  <div class="column third">
+    ВЫВЕСКИ
+    <br />
+    <br />
+    Наша компания работает на рынке
+    наружной рекламы с 1998 года. За 
+    это время нами накоплен 
+    колоссальный опыт.
+    <br />
+    <br />
+    Сотни вариантов наружной рекламы, 
+    технологий и материалов заставляют
+    <br />
+    <br />
+    Вас ломать голову. Какая реклама 
+    будет работать на Вас? Как 
+    гарантировать качество и 
+    долговечность «наружки»? Кто 
+    может создать эффектный и 
+    запоминающийся дизайн?
+    <br />
+    <br />
+    Позвоните нам, и Вы узнаете ответ на 
+    любой вопрос о наружной рекламе, 
+    мы рассчитаем стоимость Вашего 
+    заказа,спроектируем, изготовим, 
+    установим, и, при необходимости,
+    зарегистрируем Вашу рекламу!
   </div>
 </div>
