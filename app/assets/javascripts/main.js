@@ -18,7 +18,7 @@ function image_cont_size () {
     $(this).css('width',imgHeight + 'px')
     $('.button-right').css('margin-left', winWidth+ 'px')
     $(this).stop()
-      .animate({left: 0 + 'px'},250);
+      .animate({left: 0 + 'px'},1500);
       counter[index]=0;
   })
   $('.content').find('.second').css('width', winWidth + 'px')
