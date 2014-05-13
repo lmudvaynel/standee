@@ -10,10 +10,10 @@ $(document).ready(image_cont_size);
 function image_cont_size () {
     countWidth=(Math.floor($(window).width()/256));
     winWidth=countWidth*128;
+  $('.image').each(function (index){
     ceilCount[index]=Math.ceil($(this).find('ul li').length/countWidth)
     floorCount[index]=Math.floor($(this).find('ul li').length/countWidth)
     var imgHeight=$(this).find('ul li').length*130;
-  $('.image').each(function (index){
     $(this).css('width',imgHeight + 'px')
     $('.button-right').css('margin-left', winWidth+ 'px')
     $(this).stop()
