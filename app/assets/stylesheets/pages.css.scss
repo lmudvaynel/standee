@@ -1,27 +1,27 @@
 /* только для Internet Explorer */
 @font-face {
    font-family: CondPro;
-   src: local("PFDinTextCondPro-Regular"),
+   src: local("/fonts/PFDinTextCondPro-Regular"),
         url(PFDinTextCondPro-Regular.eot);
 }
 
 /* далее для всех остальных браузеров */
 @font-face {
   font-family: CondPro;
-  src: local("PFDinTextCondPro-Regular"),
+  src: local("/fonts/PFDinTextCondPro-Regular"),
        url(PFDinTextCondPro-Regular.ttf);
 }
 
 @font-face {
    font-family: CondPro-Bold;
-   src: local("PFDinTextCondPro-Bold"),
+   src: local("/fonts/PFDinTextCondPro-Bold"),
         url(PFDinTextCondPro-Bold.eot);
 }
 
 /* далее для всех остальных браузеров */
 @font-face {
   font-family: CondPro-Bold;
-  src: local("PFDinTextCondPro-Bold"),
+  src: local("/fonts/PFDinTextCondPro-Bold"),
        url(PFDinTextCondPro-Bold.ttf);
 }
 
