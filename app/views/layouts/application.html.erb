@@ -4,17 +4,11 @@
   <title>Standee</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <script type="text/javascript">
-  var a = JSON.parse('<%= raw @photos_json %>'); 
-  $(document).ready(function(){
-  });
-</script>
   <%= csrf_meta_tags %>
   <%= raw facebook_tag %>
 </head>
 <body>
 <%= render 'shared/header' %>
 <%= yield %>
-<%= render 'shared/footer' %>
 </body>
 </html>

@@ -1,6 +1,29 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* только для Internet Explorer */
+@font-face {
+   font-family: CondPro;
+   src: local("/fonts/PFDinTextCondPro-Regular"),
+        url(PFDinTextCondPro-Regular.eot);
+}
+
+/* далее для всех остальных браузеров */
+@font-face {
+  font-family: CondPro;
+  src: local("/fonts/PFDinTextCondPro-Regular"),
+       url(PFDinTextCondPro-Regular.ttf);
+}
+
+@font-face {
+   font-family: CondPro-Bold;
+   src: local("/fonts/PFDinTextCondPro-Bold"),
+        url(PFDinTextCondPro-Bold.eot);
+}
+
+/* далее для всех остальных браузеров */
+@font-face {
+  font-family: CondPro-Bold;
+  src: local("/fonts/PFDinTextCondPro-Bold"),
+       url(PFDinTextCondPro-Bold.ttf);
+}
 
 body { 
   width: 100%;
@@ -9,14 +32,28 @@ body {
 }
 
 /* Header */
-.header {}
-.header .title-left {position: absolute;}
-.header .title-center {text-align: center;}
-
+.header {font-family: 'CondPro-Bold'}
+.header .title-left {
+  font-size: 23px;
+  float: left;
+  padding-top: 10px;
+  padding-left: 15px;
+  margin-bottom: -25px;
+  width: 20%;
+}
+.header .title-center {
+  float: left;
+  margin-top: 20px;
+  font-size: 50px;
+  margin-bottom: -34px;
+}
+.standee_logo {margin-top: 20px;}
+.standee_logo img {height: 100%; width: 100%;}
 /* Footer */
 .footer { 
-  position: absolute; bottom: 0;
+  float: left;width: 100%;border-top: 2px black solid;
 }
+.copyright {margin: 5px 0px 5px; width: 100%;font-size: 13px;text-align: center;letter-spacing: 8px; font-family: 'CondPro'}
 .stlogo { 
   background: url(/images/stlogo.png);
   float: left;
@@ -30,29 +67,40 @@ body {
   margin-left: 20px;
   padding-top: 30px;
 }
+.line {display: block;height: 140px;}
+.line2 {display: block;height: 140px;width: 640px;float: left;overflow: hidden;margin-left: 4px;}
 
 .content {
   position: absolute;
   overflow-y: scroll;
   width: 100%;
-  height: 68%; 
+  height: 88%; 
 }
 .content .column {float: left;}
 .content .first { width: 20%}
-.content .second { overflow: hidden;}
+.content .second { overflow: hidden; width: 75%;}
 .content .third { right: 10%; top: 16%; width: 15%; font-size: 13px; position: fixed;}
 
-.column .name {text-align: center; line-height: 140px; height: 140px;
-  span {
+.column .name {border-bottom: 2px black solid; font-family:'CondPro';line-height: 138px;height: 138px;float: left;width: 25%;padding-left: 15px;  
+span {
     display: inline-block;
     vertical-align: middle;
-    line-height: normal;      
+    line-height: normal; 
+    font-size: 20px;     
   }
 }
+#name {font-family: 'CondPro-Bold'; font-size: 18px}
+#content {font-family: 'CondPro'; font-size: 15px}
 .element { float: left; padding: 4px 4px;}
 .image {clear: both; position: relative;}
-.button-right {height: 50px; width: 19px; background-color: green; position: absolute; float: right; margin-top: -95px;}
-.button-left {height: 50px; width: 19px; background-color: green; position: absolute; float: left; margin-top: 45px; margin-left: -23px;}
+.button-right {cursor: pointer; overflow: hidden; height: 50px; width: 19px; float: left; margin-top: 45px;}
+.button-left {cursor: pointer; overflow: hidden; height: 50px; width: 19px; float: left; margin-top: 45px;}
+
+.button-left span {margin-top: -50px;background: url(/images/arrow_left.png); width: 19px; height: 100px; display: block;background-repeat: no-repeat;background-size: 100% 100%;}
+.button-right span {margin-top: -50px;background: url(/images/arrow_right.png); width: 19px; height: 100px; display: block;background-repeat: no-repeat;background-size: 100% 100%;}
+
+.button-left span:hover {margin-top: 0px;}
+.button-right span:hover {margin-top: 0px;}
 
 .image ul li {overflow: hidden; display: inline-block; padding: 10px 2px;}
 

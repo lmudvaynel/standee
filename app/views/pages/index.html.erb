@@ -1,63 +1,48 @@
 <script type="text/javascript">
   var a = JSON.parse('<%= raw @photos_json %>'); 
+  var b = JSON.parse('<%= raw @gall_json %>'); 
+
+  $(document).ready(function () {
+  });
+
   $(document).ready(update_tag(a));
 </script>
 <div class="content">
-  <div class="column first">
-    <% Gallery.all.each do |gallery| %>
-      <div class="name">
-        <span><%= gallery.name %></span>
-      </div>
-    <% end %>
-  </div>
   <div class="column second">
     <% Gallery.all.each_with_index do |gallery,index| %>
-    <div class="button-left" onclick="left_click(<%=index%>)">
-      </div>
-      <div class="image">
-        <ul>
-          <% gallery.photos.each do |photo| %>
-            <li>
-              <%= link_to photo.image.url(:original), rel: "prettyPhoto[pp_gal_#{index}]" do %>
-                <%= image_tag photo.image.url(:gallery), 
-                    alt: photo.alt,
-                    title: photo.title %>
+      <div class="line" id-g="<%= gallery.id %>">
+        <div class="name">
+          <span><%= gallery.name %></span>
+        </div>
+        <div class="button-left" onclick="left_click(<%=index%>)">
+          <span></span>
+        </div>
+        <div class="line2">
+          <div class="image">
+            <ul>
+              <% gallery.photos.each do |photo| %>
+                <li>
+                  <%= link_to photo.image.url(:original), rel: "prettyPhoto[pp_gal_#{index}]" do %>
+                    <%= image_tag photo.image.url(:gallery), 
+                        alt: photo.alt,
+                        title: photo.title %>
+                  <% end %>
+                </li>
               <% end %>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-      <div class="button-right" onclick="right_click(<%= index %>)">
+            </ul>
+          </div>
+        </div>
+        <div class="button-right" onclick="right_click(<%= index %>)">
+          <span></span>
+        </div>
       </div>
     <% end %>
   </div>
   <div class="column third">
-    ВЫВЕСКИ
+    <div id="name"></div>
     <br />
     <br />
-    Наша компания работает на рынке
-    наружной рекламы с 1998 года. За 
-    это время нами накоплен 
-    колоссальный опыт.
-    <br />
-    <br />
-    Сотни вариантов наружной рекламы, 
-    технологий и материалов заставляют
-    <br />
-    <br />
-    Вас ломать голову. Какая реклама 
-    будет работать на Вас? Как 
-    гарантировать качество и 
-    долговечность «наружки»? Кто 
-    может создать эффектный и 
-    запоминающийся дизайн?
-    <br />
-    <br />
-    Позвоните нам, и Вы узнаете ответ на 
-    любой вопрос о наружной рекламе, 
-    мы рассчитаем стоимость Вашего 
-    заказа,спроектируем, изготовим, 
-    установим, и, при необходимости,
-    зарегистрируем Вашу рекламу!
+    <div id="content"></div>
   </div>
+  <%= render 'shared/footer' %>
 </div>
