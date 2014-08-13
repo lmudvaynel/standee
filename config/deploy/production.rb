@@ -1,6 +1,6 @@
-role :web, "5.9.50.131"
-role :app, "5.9.50.131"
-role :db,  "5.9.50.131", :primary => true
+role :web, "83.69.233.183:1222"
+role :app, "83.69.233.183:1222"
+role :db,  "83.69.233.183:1222", :primary => true
 
 set :rails_env, "production"
 set :branch, "master"
